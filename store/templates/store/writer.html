@@ -1,0 +1,46 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% load customfunction %}
+{% block container %}
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="view-details">
+								<img src="{{ wrt.pic.url }}">
+							</div>
+						</div>
+						
+						<div class="col-sm-8">
+							<div class="product-information">
+								<h3>{{ wrt.name }}</h3>
+								<article class="text-justify" style="margin-top:10px; color:#fff">{{ wrt.bio }}</article>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="col-sm-12">
+					<div class="titleheader">
+						<h3 class="h2header text-center">Published Books</h3>
+					</div>
+					<div class="row">
+						{% for item in book %}
+						<div class = 'col-sm-3'>
+							<div class="book-wrapper1 text-center">
+								<div class="coverpage">
+									<img src="{{ item.coverpage.url }}"/>
+								</div>
+								<a href="{% url 'store:book' id=item.id %}">{{ item.name }}</a>
+								<a href="{% url 'store:writer'  id=item.writer.id %}">{{ item.writer }}</a>
+								<div class="rating">
+									{{ item.totalrating|averagerating:item.totalreview }}
+									<span class="totalrating">{{ item.totalreview|add:-1 }}</span>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+{% endblock %}
