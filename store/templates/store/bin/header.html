@@ -21,18 +21,11 @@
 			<div class="col-sm-4">
 				<div class="pull-right">
 					<ul class="navbar-nav">
-						{% if request.user.is_authenticated %}
-					    <li class="dropdown profile"><a class="fa fa-user-circle" href="#"> {{ request.user.username }}</a>
+						<li class="dropdown profile"><a class="fa fa-user-circle" href="#"></a>
 					        <ul role="menu" class="sub-menu">
-					            <li><a href="{% url 'admin_redirect' %}" class="fa fa-user-circle"> Admin</a></li>								
-								<li><a href="{% url 'cart:cart_details' %}" class="fa fa-star"> Favorites</a></li>
-								<li><a href="{% url 'store:signout' %}"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+					            <li><a href="{% url 'admin_redirect' %}" class="fa fa-user-circle"> Admin</a></li>
 							</ul> 
 					    </li>
-					    
-					    {% else %}
-					    <li class="profile"><a href="{% url 'store:signin' %}">Login</a></li>
-					    {% endif %}
 					</ul>
 				</div>
 			</div>

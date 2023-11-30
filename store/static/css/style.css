@@ -82,6 +82,7 @@ a:focus {
 /* Dropdown */
 .navbar-nav{
 	display: block;
+  margin-left: 0px;
 }
 
 .navbar-nav li{
@@ -97,7 +98,7 @@ a:focus {
 ul.sub-menu {
 	position: absolute;
 	top: 40px;
-	left: 0px;
+	left: -60px;
   background: #273544 repeat scroll 0 0 #14243a;
 	list-style: none;
 	padding-left: 0px;
