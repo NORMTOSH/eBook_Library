@@ -4,17 +4,17 @@
 						
 			<div class="row">
 				{% for item in book %}
-				<div class = 'col-sm-3'>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 					<div class="book-wrapper1 text-center">
-						<div class="coverpage">
-							<img src="{{ item.coverpage.url }}"/>
-						</div>
-						<a href="{% url 'store:book' id=item.id %}">{{ item.name }}</a>
-						<a href="{% url 'store:writer'  id=item.writer.id %}">{{ item.writer }}</a>
-						<div class="rating">
-							{{ item.totalrating|averagerating:item.totalreview }}
-							<span class="totalrating">{{ item.totalreview|add:-1 }}</span>
-						</div>
+					<div class="coverpage">
+						<img src="{{ item.coverpage.url }}" />
+					</div>
+					<a href="{% url 'store:book' id=item.id %}">{{ item.name }}</a>
+					<a href="{% url 'store:writer' id=item.writer.id %}">{{ item.writer }}</a>
+					<div class="rating">
+						{{ item.totalrating|averagerating:item.totalreview }}
+						<span class="totalrating">{{ item.totalreview|add:-1 }}</span>
+					</div>
 					</div>
 				</div>
 				{% endfor %}

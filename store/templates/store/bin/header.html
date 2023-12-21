@@ -1,13 +1,16 @@
 {% load static %}
+<meta charset="UTF-8">
 <div class="header-top ">
 	<div class="container-fluid">
 		<div class="row">					
-			<div class="col-sm-3">			
+			<div class="col-sm-5">			
 				<div class="pull-left">
-					<img src="{% static 'images/logo/logo.png' %}" style="width: 60px; height: 50;">
-					<div class="header-welcome">
-					<a href="{% url 'store:index' %}"><h3 style="font-family:Lucida Handwriting; color: whitesmoke ">ABYA LIBRARY</h3></a>
+					<div class="header-logo">
+						<img src="{% static 'images/logo/logo.png' %}" style="width: 60px; height: 50;">
 					</div>
+					<div class="header-welcome">
+						<a href="{% url 'store:index' %}"><h3 style="font-family: 'Splints', sans-serif; color: #ffc107;">ABYA LIBRARY</h3></a>
+					</div>		
 				</div>
 			</div>
 			<div class="col-sm-5">
@@ -18,24 +21,32 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-sm-4">
-				<div class="pull-right">
-					<ul class="navbar-nav">
-						{% if request.user.is_authenticated %}
-					    <li class="dropdown profile"><a class="fa fa-user-circle" href="#"> {{ request.user.username }}</a>
-					        <ul role="menu" class="sub-menu">
-					            <li><a href="{% url 'admin_redirect' %}" class="fa fa-user-circle"> Admin</a></li>								
-								<li><a href="{% url 'cart:cart_details' %}" class="fa fa-star"> Favorites</a></li>
-								<li><a href="{% url 'store:signout' %}"><i class="fa fa-sign-out"></i> Sign Out</a></li>
-							</ul> 
-					    </li>
-					    
-					    {% else %}
-					    <li class="profile"><a href="{% url 'store:signin' %}">Login</a></li>
-					    {% endif %}
-					</ul>
-				</div>
-			</div>
 		</div>
+	</div>
+</div>
+
+
+<!-- partial:index.partial.html -->
+<div class="nav">
+	<input type="checkbox" id="nav-check">
+	<div class="nav-header">
+	  <div class="nav-title">
+		<h2>Category</h2>
+	  </div>
+	</div>
+	
+	<div class="nav-btn">
+	  <label for="nav-check">
+		<span></span>
+		<span></span>
+		<span></span>
+	  </label>
+	</div>
+	
+	<div class="nav-links">
+		<a href="{% url 'store:books' %}">All Books</a>
+		<a href="https://abya.africa" target="_blank">Home</a>
+		<a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">Courses</a>
+		<a href="{% url 'admin_redirect' %}" class="fa fa-user-circle"> Admin</a>
 	</div>
 </div>
