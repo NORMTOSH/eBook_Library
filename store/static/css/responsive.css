@@ -1,0 +1,315 @@
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .header-logo {
+    padding: 10px;
+    text-align: center; /* Center align the logo on smaller screens */
+  }
+
+  .col-sm-3 {
+    width: 100%; /* Make the logo take full width on smaller screens */
+  }
+
+  .col-sm-5 {
+    width: 100%; /* Make the search box take full width on smaller screens */
+    margin-left: 0; /* Remove left margin */
+    text-align: center;
+  }
+
+  .col-sm-4 {
+    width: 100%; /* Make the user profile section take full width on smaller screens */
+    margin-top: 10px; /* Add some top margin */
+  }
+
+  .search_box {
+    margin-left: 0;
+    position: relative;
+  }
+
+}
+  
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 10px;
+      padding-bottom: 50px;
+    }
+  
+    .navbar-nav li {
+      display: block;
+    }
+  
+    .navbar-nav li ul.sub-menu {
+      top: 0px;
+      left: auto;
+      width: 100%;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  
+    .navbar-nav > li:hover > ul.sub-menu {
+      animation: none;
+    }
+  }
+
+  /* Responsive styles */
+@media (min-width: 768px) {
+    .cat-wrapper {
+      width: auto; /* Reset width for larger screens */
+      flex: 1;
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .titleheader > h3,
+    .titleheader > a {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px; /* Add space between elements on smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (min-width: 768px) {
+    .sliderzx, .row {
+      display: flex;
+      flex-wrap: wrap; /* Allow the books to wrap to the next line on smaller screens */
+    }
+  
+    .coverpage {
+      padding: 10px;
+    }
+  
+    .book-details {
+      padding: 10px;
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .coverpage,
+    .book-details {
+      flex: 1 100%; /* Adjust flex property for full width on smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .totalrating {
+      display: block; /* Change to block for better stacking on smaller screens */
+      margin-left: 0; /* Remove margin for better alignment */
+      margin-top: 6px; /* Add space between the total rating and other elements */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .btn-warning,
+    .btn-warning:hover {
+      font-size: 12px; /* Adjust font size for smaller screens */
+    }
+  
+    .book-wrapper .btn,
+    .pricebox .btn {
+      padding: 2px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .view-details {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .view-details img {
+      max-height: 200px; /* Adjust maximum height for smaller screens */
+    }
+  }
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .grid-item:hover .view-details img {
+      transform: none; /* Remove scaling on smaller screens */
+    }
+  
+    .grid-item:hover {
+      -webkit-transform: none; /* Remove rotation on smaller screens */
+      transform: none;
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    div.lookInsideDiv {
+      width: 100%;
+      max-width: 500px;
+      margin-left: -250px;
+      height: auto;
+      margin-top: -350px;
+    }
+  
+    div.lookInsideDiv>div.pagesArea {
+      height: auto;
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    ul.pages {
+        height: auto; /* Adjust the height for smaller screens */
+    }
+
+    ul.pages>li {
+        margin-bottom: 10px; /* Adjust margin for better spacing on smaller screens */
+    }
+    
+    ul.pages>li>img {
+        width: 100%; /* Ensure images take up the full width of the container */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .product-information,
+    .pricebox {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .rating-stars ul > li.star > i.fa,
+    .review-stars ul > li.star > i.fa {
+      font-size: 16px; /* Adjust font size for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .card-body img {
+      max-width: 50px; /* Adjust max-width for smaller screens */
+    }
+  
+    .read-btn {
+      margin-left: 30px; /* Adjust margin for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .search_menu {
+      height: 30px; /* Adjust height for smaller screens */
+    }
+  
+    .search_menu h4 {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .cart_coverpage a img {
+      max-width: 50px; /* Adjust max-width for smaller screens */
+    }
+  
+    .cart_quantity {
+      width: 100px; /* Adjust width for smaller screens */
+    }
+  
+    .cart_quantity input {
+      height: 25px; /* Adjust height for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .btn.btn-primary.bootstrap-touchspin-down,
+    .btn.btn-primary.bootstrap-touchspin-up {
+      padding: 3px 8px; /* Adjust padding for smaller screens */
+      height: 28px; /* Adjust height for smaller screens */
+    }
+  
+    .continue_or_next {
+      padding-top: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    #snackbar {
+        min-width: 200px; /* Adjust minimum width for smaller screens */
+        margin-left: -100px; /* Adjust margin for smaller screens */
+        font-size: 15px; /* Adjust font size for smaller screens */
+        bottom: 10px; /* Adjust bottom position for smaller screens */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .footer {
+      flex-direction: column; /* Stack sections vertically on smaller screens */
+      align-items: center; /* Center align sections on smaller screens */
+      text-align: center; /* Center align text on smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .footer-section {
+      flex: 1; /* Adjust flex value for smaller screens */
+      margin-left: 0; /* Remove negative margin for smaller screens */
+      margin-bottom: 20px; /* Add margin at the bottom for better spacing on smaller screens */
+      align-items: center;
+    }
+  
+    .footer-section h3 {
+      margin-left: 0; /* Center align heading on smaller screens */
+      align-items: center;
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .footer-contact,
+    .footer-links li a {
+      margin-left: 0; /* Remove negative margin for smaller screens */
+      align-items: center;
+    }
+  
+    .footer-logo {
+      margin-top: 20px; /* Adjust top margin for smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .copyright {
+      font-size: 12px; /* Adjust font size for smaller screens */
+      padding: 5px; /* Adjust padding for better spacing on smaller screens */
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .footer-widget ul li {
+      width: 100%; /* Full width for list items on smaller screens */
+      align-items: center;
+    }
+  }
+
+  /* Responsive styles */
+@media (max-width: 767px) {
+    .subscribe-form input {
+      padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .subscribe-form button {
+      padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .subscribe-form button i {
+      font-size: 18px; /* Adjust font size for smaller screens */
+    }
+  }

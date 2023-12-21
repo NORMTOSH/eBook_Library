@@ -1,9 +1,7 @@
-		
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item"><h4>Category</h4></li>
-				<li class="list-group-item"><a href="{% url 'store:books' %}">All Books</a></li>
-				{% for p in cat %}
-				<li class="list-group-item"><a href="{% url 'store:category' id=p.id %}">{{p.name}}</a></li>
-				{% endfor %}
-			</ul>
-		
+	<div class="sidebar">
+		<ul>
+			{% for p in cat %}
+			<li><a href="{% url 'store:category' id=p.id %}">{{p.name}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>

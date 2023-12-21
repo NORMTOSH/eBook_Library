@@ -40,18 +40,159 @@ a:focus {
   outline: none!important;
 }
 
-/* ==== search bar ==== */
-.header-welcome {
-  margin-top: -40px;
-  margin-left: 35px;
+/*navbar*/
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  background-color: rgba(35, 47, 62, 0.8);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title h2 {
+  display: inline-block;
+  color:#fac10a;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display:inline;
+}
+
+.nav > .nav-links {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #fac10a;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    margin-left: 30vh;
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+  }  
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    justify-content: flex-start; /* Adjust alignment for smaller screens */
+  }
+}
+
+
+/* ==== side bar ==== */
+.sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  width: 115%;
+	background-color: rgba(35, 47, 62, 0.8);
+  margin-left: -13px;
+}
+
+.sidebar li h3, .sidebar a {
+  color: #ffffff;
+  margin-left: -30px;
+  padding: 8px;
+}
+
+.sidebar a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+/* ==== search bar ==== */
 .header-welcome {
-  margin-top: -40px;
-  margin-left: 60px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.header-welcome a:hover {
+  text-decoration: none;
+}
+
+.header-logo {
+  margin-top: 0px;
+  margin-left: 0px;
+  text-align: center;
+  padding: 0px;
 }
 
 .header-top{
+  display: inline;
   border-bottom: 1px solid;
   padding-top: 10px;
   padding-bottom: 15px;
@@ -60,8 +201,8 @@ a:focus {
 }
 
 .search_box{
-  margin-top: 15px;
-  margin-left: 70px;
+  margin-top: 45px;
+  margin-left: 0vh;
   padding: 2px; 
   background-color: #efefef;
   border: 1px solid #d9d9d9;
@@ -82,6 +223,7 @@ a:focus {
 /* Dropdown */
 .navbar-nav{
 	display: block;
+  margin-left: 0px;
 }
 
 .navbar-nav li{
@@ -97,7 +239,7 @@ a:focus {
 ul.sub-menu {
 	position: absolute;
 	top: 40px;
-	left: 0px;
+	left: -60px;
   background: #273544 repeat scroll 0 0 #14243a;
 	list-style: none;
 	padding-left: 0px;
@@ -148,7 +290,7 @@ ul.sub-menu {
     transform: translateY(0);
   }
 }
-.cart, .profile{
+.profile{
 	background: #14243a;
 	padding: 10px;
 	border-radius: 5px;
@@ -224,11 +366,12 @@ ul.sub-menu {
 .book-wrapper1{
   width: 210px;
   height: 310px;
-  margin: 10px;
+  margin: 7px;
   border: 0px solid #054555;
   padding: 10px;
   display: inline-block;
   background-color: rgba(10, 72, 83, 0.3);
+  border-width: 2px;
 }
 
 .book-wrapper .btn, .book-wrapper1 .btn{
@@ -652,6 +795,7 @@ ul.pages>li>img{
 .cart_quantity input{
   height: 30px;
 }
+
 .btn.btn-primary.bootstrap-touchspin-down, .btn.btn-primary.bootstrap-touchspin-up{
   background: #232f3e;
   padding:5px 10px;
@@ -779,21 +923,15 @@ margin-top: 100px;
 }
 
 .footer-widget-heading h3 {
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
- 
   margin-bottom: 40px;
   position: relative;
+  text-decoration: underline;
+  text-decoration-color: #fac10a;
+  text-decoration-skip-ink: auto;
 }
-.footer-widget-heading h3::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  height: 2px;
-  width: 50px;
-  background: #FFCC36;
-}
+
 .footer-widget ul li {
   display: inline-block;
   float: left;
@@ -807,6 +945,7 @@ margin-top: 100px;
   color: #878787;
   text-transform: capitalize;
 }
+
 .subscribe-form {
   position: relative;
   overflow: hidden;
