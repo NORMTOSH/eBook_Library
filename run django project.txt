@@ -1,0 +1,93 @@
+The error you're encountering indicates that the Django module is not installed or not available in the Python environment you're using. This is a common issue if you're not using a virtual environment or if the virtual environment is not activated.
+
+### Steps to Resolve the Issue:
+
+1. **Create and Activate a Virtual Environment (Recommended):**
+
+   It's a good practice to use a virtual environment to manage your project's dependencies. Here are the steps to create and activate one:
+
+   1. Navigate to your project directory:
+
+      ```sh
+      cd /home/norman/Documents/ABYA_LMS/django_backend
+      ```
+
+   2. Create a virtual environment (if you haven't already):
+
+      ```sh
+      python3 -m venv env
+      ```
+
+   3. Activate the virtual environment:
+
+      - On Linux and macOS:
+
+        ```sh
+        source env/bin/activate
+        ```
+
+      - On Windows:
+
+        ```sh
+        .\env\Scripts\activate
+        ```
+
+2. **Install Django in the Virtual Environment:**
+
+   Once the virtual environment is activated, install Django and any other dependencies:
+
+   ```sh
+   pip install django
+   ```
+
+   If you have a `requirements.txt` file, you can install all dependencies listed there:
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. **Run Your Django Application:**
+
+   With the virtual environment activated and Django installed, you should be able to run your Django application without issues:
+
+   ```sh
+   python manage.py runserver
+   ```
+
+### Summary of Commands:
+
+1. Navigate to your project directory:
+
+   ```sh
+   cd /home/norman/Documents/ABYA_LMS/django_backend
+   ```
+
+2. Create and activate a virtual environment:
+
+   ```sh
+   python3 -m venv env
+   source env/bin/activate  # On Linux and macOS
+   # .\env\Scripts\activate  # On Windows
+   ```
+
+3. Install Django:
+
+   ```sh
+   pip install django
+   ```
+
+4. (Optional) Install all dependencies from `requirements.txt`:
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+5. Run your Django application:
+
+   ```sh
+   python manage.py runserver
+   ```
+
+### Note:
+
+If you already have a virtual environment but forgot to activate it, simply navigate to your project directory and activate the virtual environment using the `source` command as shown above. Then, try running your Django application again.
